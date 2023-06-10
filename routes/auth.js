@@ -2,7 +2,7 @@ const express = require('express');
 const passport = require('passport');
 
 const { isLoggedIn, isNotLoggedIn } = require('../middlewares');
-const { join, login, logout } = require('../controllers/auth');
+const { join, login, logout, mod } = require('../controllers/auth');
 
 const router = express.Router();
 
@@ -11,6 +11,8 @@ router.post('/join', isNotLoggedIn, join);
 router.post('/login', isNotLoggedIn, login);
 
 router.post('/logout', isLoggedIn, logout);
+
+router.post('/mod', isLoggedIn, mod); // 로그인 정보 변경 라우터
 
 router.get('/logout', isLoggedIn, logout);
 

@@ -46,3 +46,21 @@ exports.logout = (req,res) => {
         res.redirect('/');
     });
 };
+// 로그인 정보 변경 동작
+exports.mod = async (req, res, next) => {
+    const { email, nick, password } = req.body;
+    try {
+        const exUser = await User.findOne({ where: { id: req.user.id }});
+        const hash = await bcrypt.hash(password, 12);
+        await User.update({
+            email,
+            nick,
+            password: hash,
+        },
+        { where: { id: req.user.id }});
+        return res.redirect('/');
+    } catch (error) {
+        console.error(error);
+        return next(error);
+    }
+}

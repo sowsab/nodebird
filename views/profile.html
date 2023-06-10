@@ -18,5 +18,19 @@
         {% endfor %}
       {% endif %}
     </div>
+
+    <div class="timeline">
+      <form id="mod-form" action="/auth/mod" method="post">
+        <div class="input-group">
+          <label for="mod-nick">닉네임</label>
+          <input id="mod-nick" type="text" name="nick"></div>
+        <div class="input-group">
+          <label for="mod-password">비밀번호</label>
+          <input id="mod-password" type="password" name="password">
+        </div>
+        <button id="mod-btn" type="submit" class="btn">정보 변경</button>
+      </form>
+    </div>
+
   </div>
 {% endblock %}
