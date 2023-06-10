@@ -15,11 +15,13 @@ exports.follow = async (req,res,next) => {
     }
 };
 
+
+// unfollow 컨트롤 추가
 exports.unfollow = async (req,res,next) => {
     try {
         const user = await User.findOne({ where: { id: req.user.id} });
         if (user) { // req.user.id가 followerId, req.params.id가 followingId
-            await user.removeFollowing(parseInt(req.params.id, 10));
+            await user.removeFollowing(parseInt(req.params.id, 10)); // follow코드에서 관계만 지우는 코드로 변경
             res.send('success');
         } else {
             res.status(404).send('no user');
