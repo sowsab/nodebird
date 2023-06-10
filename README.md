@@ -17,3 +17,5 @@ router./user에 코드와 controllers의 unfollow관련 추가, 기존 코드랑
 # 프로필 정보 바꾸기
 
 필요한것 : 회원정보중 nick과 password만 바꾸게 만들면 된다.
+
+그런데 카카오는 개인정보를 바꾸게 만드는게 좋나...?
