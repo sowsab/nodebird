@@ -49,3 +49,25 @@ exports.renderHashtag = async (req,res,next) => {
         return next(error);
     }
 };
+
+exports.renderUser = async (req,res,next) => {
+    const query = req.query.user;
+    if (!query) {
+        return res.redirect('/');
+    }
+    try {
+        const user = await User.findOne({ where: { nick: query } });
+        let posts = [];
+        if (user) {
+            posts = await user.getPosts({ include: [{ model: User }] });
+        }
+
+        return res.render('main', {
+            title: `${query} | NodeBird`,
+            twits: posts,
+        });
+    } catch (error) {
+        console.error(error);
+        return next(error);
+    }
+};
