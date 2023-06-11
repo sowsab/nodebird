@@ -30,10 +30,9 @@
             <div class="twit">
               <input type="hidden" value="{{twit.User.id}}" class="twit-user-id">
               <input type="hidden" value="{{twit.id}}" class="twit-id">
-              <div class="twit-author">{{twit.User.nick}}</div>
               <form id="twit-author" action="/user">
-                <input type="text" name="user" placeholder="유저 검색">
-                <button class="btn">검색</button>
+                <input type="submit" name="user" value="{{twit.User.nick}}" readonly>
+
               </form>
               {% if not followingIdList.includes(twit.User.id) and twit.User.id !== user.id %}
                 <button class="twit-follow">팔로우하기</button>
