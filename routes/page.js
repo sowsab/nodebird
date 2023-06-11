@@ -22,6 +22,6 @@ router.get('/', renderMain);
 
 router.get('/hashtag', renderHashtag);
 
-router.get('/user', renderUser);
+router.get('/user', renderUser); // controller의 기능 불러오기
 
 module.exports = router;

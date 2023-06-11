@@ -51,12 +51,12 @@ exports.renderHashtag = async (req,res,next) => {
 };
 
 exports.renderUser = async (req,res,next) => {
-    const query = req.query.user;
+    const query = req.query.user; // model hashtag가 아닌 user로 변경
     if (!query) {
         return res.redirect('/');
     }
     try {
-        const user = await User.findOne({ where: { nick: query } });
+        const user = await User.findOne({ where: { nick: query } }); // title을 nick으로 변경해야 nick을 검색함
         let posts = [];
         if (user) {
             posts = await user.getPosts({ include: [{ model: User }] });
