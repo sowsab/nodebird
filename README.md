@@ -19,3 +19,11 @@ router./user에 코드와 controllers의 unfollow관련 추가, 기존 코드랑
 필요한것 : 회원정보중 nick과 password만 바꾸게 만들면 된다.
 
 그런데 카카오는 개인정보를 바꾸게 만드는게 좋나...?
+
+view의 profile에서 join의 코드를 복붙하고 일부 코드 제거하고, 변수도 프로필 정보 바꾸는것으로 변경함
+
+controllers/auth에서 join의 코드를 복붙하고 계정 정보 유무 코드 제거 후
+
+로그인한 정보를 찾는 변수로 변경, create코드를 update로 변경.
+
+routes/auth의 코드는 기존 코드를 참고하여 추가함
