@@ -27,3 +27,13 @@ controllers/auth에서 join의 코드를 복붙하고 계정 정보 유무 코�
 로그인한 정보를 찾는 변수로 변경, create코드를 update로 변경.
 
 routes/auth의 코드는 기존 코드를 참고하여 추가함
+
+# 사용자 이름 누르면 해당 사용자 게시글만 보여주는 기능
+
+필요한것 : hashtag 검색을 user 검색으로 갈아버리는것.
+
+controllers/page의 renderHashtag을 renderUser로 복붙후 일부 변수과 값을 바꾸는것으로 쉽게 구현함
+
+routes/page에 controller를 참조하게 코드 수정후
+
+view/main에서 해시태그 검색기능을 복사후 input 부분만 남겨두고 input type을 submit으로 바꿈 그리고 값을 기존의 twit-author부분의 변수를 복붙함
