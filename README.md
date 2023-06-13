@@ -37,3 +37,11 @@ controllers/page의 renderHashtag을 renderUser로 복붙후 일부 변수과 �
 routes/page에 controller를 참조하게 코드 수정후
 
 view/main에서 해시태그 검색기능을 복사후 input 부분만 남겨두고 input type을 submit으로 바꿈 그리고 값을 기존의 twit-author부분의 변수를 복붙함
+
+# 게시글 삭제
+
+필요한것 : db에서 post를 삭제하는것
+
+controllers/post에서 post한것을 삭제하는 코드를 작성후 routes/post에 라우트 코드를 작성한다.
+
+view/main에서 follow 버튼을 참고한 버튼과 이벤트를 추가한다.
