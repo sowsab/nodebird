@@ -34,7 +34,5 @@ router.post('/img', isLoggedIn, upload.single('img'), afterUploadImage);
 // POST /post
 const upload2 = multer();
 router.post('/', isLoggedIn, upload2.none(), uploadPost);
-
-router.delete('/:id', isLoggedIn, removePost); // 삭제기능
   
 module.exports = router;
