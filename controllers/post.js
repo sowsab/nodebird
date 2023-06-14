@@ -33,7 +33,7 @@ exports.uploadPost = async (req, res, next)=>{
 exports.removePost = async (req,res,next)=>{
     try{
       await Post.destroy({where: {id: req.params.id, userId: req.user.id}});
-      res.send('OK');
+      res.send('sucess');
     } catch(error){
       console.error(error);
       next(error);  
