@@ -46,6 +46,6 @@ view/main에서 해시태그 검색기능을 복사후 input 부분만 남겨두
 
 # 좋아요 기능
 
-필요한것 : follow기능을 살짝 변경 시켜서 구현해야함, passport에서 twit-id와 user-id를 연결해야하나 구현법을 모름
+필요한것 : follow기능을 살짝 변경 시켜서 구현해야함, models에서 user와 post를 연결해도 post에 twit-id가 없어 구현법을 모름, passport에서 twit-id와 user-id를 연결해야하나 구현법을 모름
 
 구현 못함 코드를 찾았으나 동작을 설명할 자신이 없음
