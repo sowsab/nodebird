@@ -42,6 +42,19 @@ view/main에서 해시태그 검색기능을 복사후 input 부분만 남겨두
 
 필요한것 : db에서 post를 삭제하는것
 
-controllers/post에서 post한것을 삭제하는 코드를 작성후 routes/post에 라우트 코드를 작성한다.
+어떻게 해야할지 막막해서 예시에서 html 코드 복붙함
 
-view/main에서 follow 버튼을 참고한 버튼과 이벤트를 추가한다.
+두가지 변수(?) post와 user관련으로 필요한것을 찾음
+
+controllers/post에서 post 함수를 일반 복붙하고 db관련 변수 수정과 추가를해서 userid와 해당 post를 선택하게 함
+
+post 관련으로 post를 추가하는 명령어을 삭제 관련으로 바꿈
+
+routes에서 controller와 view를 연결함 route.post를 쓰니 오류가 터져 route.delete를 찾고 바꿈
+
+hashtag관련으로 오류가 나와 hashtag관련을 전부 제거함
+
+정상 동작함
+
+아쉬운것 : 이미지 올린거 어떻게 삭제할지는 모름.. 삭제후에 해당 포스트의 이미지를 삭제하는 명령어를 어떻게 짤지 모르겠음...
+
